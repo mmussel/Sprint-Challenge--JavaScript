@@ -30,13 +30,26 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+.forEach changes the array, map returns a new one.
+
 2. What is the difference between a function and a method?
+
+They are pretty similar, but a method is passed the object which it was called, and it can operate on data within the class.
 
 3. What is closure?
 
+Gives access to outer functions, from within an inner function.
+
 4. Describe the four rules of the 'this' keyword.
 
+-Is this function called by 'new'?
+-Is the function called by 'call()', 'apply()', or 'bind()'?
+-Is the function called as a method?
+-Is the function called in the global scope?
+
 5. Why do we need super() in an extended class?
+
+It is used to call the parent constructor function.
 
 ## Project Set up
 
@@ -78,7 +91,7 @@ Create constructors, bind methods, and create cuboids in this prototypes challen
 
 ## Task 4: Classes
 Once you have completed the prototypes challenge, it's time to convert all your hard work into classes.
-* [ ] Use the [classes.js](challenges/classes.js) link to get started. Read the instructions carefully!
+* [x ] Use the [classes.js](challenges/classes.js) link to get started. Read the instructions carefully!
 
 In your solutions, it is essential that you follow best practices and produce clean and professional results. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
