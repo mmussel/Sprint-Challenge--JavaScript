@@ -15,20 +15,20 @@
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+console.log(tyrannosaurus.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(velociraptor.diet);
 
 // How long was a stegosaurus?
-console.log();
+console.log(stegosaurus.length);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(tyrannosaurus.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+console.log(tyrannosaurus.roar());
 
 
 // ==== Arrays ====
@@ -91,6 +91,9 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
+zooAnimals.forEach(function(animal){
+  displayNames.push(`Name: ${animal.animal_name}, Scientific: ${animal.scientific_name}`);
+});
 console.log(displayNames);
 
 /* Request 2: .map()
@@ -100,6 +103,9 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 */
 
 const lowCaseAnimalNames = [];
+const lowCaseAnimalNames = zooAnimals.map(function(item){
+  return item.animal_name.toLowerCase();
+});
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
@@ -108,6 +114,9 @@ The zoos are concerned about animals with a lower population count. Using filter
 
 */
 const lowPopulationAnimals = [];
+const lowPopulationAnimals = zooAnimals.filter(function(animal){
+  return animal.population < 5;
+});
 console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
@@ -116,6 +125,10 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 const populationTotal = 0;
+const populationTotal = zooAnimals.reduce(function(totalAnimals, item){
+  return totalAnimals + item.population;
+}, 0);
+
 console.log(populationTotal);
 
 
