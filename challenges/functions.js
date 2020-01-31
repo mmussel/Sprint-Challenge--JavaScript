@@ -19,7 +19,7 @@ function add(a,b){
   return a + b;
 }
 function multiply (a,b) {
-  return a + b;
+  return a * b;
 }
 function greeting(firstName, lastName){
   return `Hello ${firstName} ${lastName}, nice to meet you!`;
